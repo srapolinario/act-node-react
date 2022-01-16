@@ -1,11 +1,10 @@
 {
-  "extends": ["airbnb"],
-  "rules": {
-    "cypress/no-pause": "error",
-    "quotes": "off",
-    "import/prefer-default-export": "off",
-    "indent": ["error", 4],
-    "prefer-default-export": "off",
-    "max-len": [1, 500, 4]
-  }
+    "extends": ["airbnb"],
+    "rules": {
+        "quotes": "off",
+        "import/prefer-default-export": "off",
+        "indent": ["error", 4],
+        "prefer-default-export": "off",
+        "max-len": [1, 500, 4]
+    }
 }
