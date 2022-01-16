@@ -5,7 +5,8 @@
  * No contexto atual estamos exportando por padrão o que vier na frente,
  * no caso {}.
  *
- * Troque "{}" pela declaração de uma variável do tipo string com o seu nome
+ * Faça a declaração de uma variável do tipo string com o seu nome
+ * Troque "{}" pelo nome dado a variável
  *
  */
 
