@@ -9,6 +9,5 @@
  * Troque "{}" pelo nome dado a variável
  *
  */
-let number = 3;
 
-export default number;
+export default {};
