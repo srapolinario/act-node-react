@@ -101,3 +101,13 @@ pois garante a confiabilidade e a veracidade das informações recebidas.
 |    >=    | Maior ou igual que    | Verifica se o valor da esquerda é maior que ou igual ao valor da direita.                    |   5 >= 4    |
 
 _Nota_: Todos as comparações acima retornam falso
+
+## Operadores lógicos
+
+|     Operador     |     Utilização     | Descrição                                                                                                                                                                                                                                      |
+| :--------------: | :----------------: | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| AND lógico (&&)  |  `expr1 && expr2`  | (E lógico) - Retorna expr1 caso possa ser convertido para falso; senão, retorna expr2. Assim, quando utilizado com valores booleanos, && retorna verdadeiro caso ambos operandos sejam verdadeiros; caso contrário, retorna falso.             |
+| OU lógico (\|\|) | `expr1 \|\| expr2` | (OU lógico) - Retorna expr1 caso possa ser convertido para verdadeiro; senão, retorna expr2. Assim, quando utilizado com valores booleanos, retorna verdadeiro caso ambos os operandos sejam verdadeiro; se ambos forem falsos, retorna falso. |
+|  NOT lógico (!)  |      `!expr`       | (Negação lógica) Retorna falso caso o único operando possa ser convertido para verdadeiro; senão, retorna verdadeiro.                                                                                                                          |
+
+_VER MAIS_: [Veja lista completa de operadores](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_operators)
