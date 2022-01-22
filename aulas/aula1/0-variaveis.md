@@ -30,7 +30,7 @@ _sintaxe_: const name1 = value1 [, name2 = value2 [, ... [, nameN = valueN]]]];
 
 _VER MAIS_: [Referência const no MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/const)
 
-### Var
+### var
 
 As declarações de variáveis utilizando **var** são de escopo global e sofrem _hoisting_.
 

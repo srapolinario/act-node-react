@@ -16,6 +16,8 @@ Em javascript a mesma função acima pode ser declarada da seguinte forma:
 function f(x) {
     return 2 * x;
 }
+
+f(2); //returns 4
 ```
 
 Da mesma forma em typescript a mesma função pode ser declarada da seguinte forma:
@@ -24,6 +26,8 @@ Da mesma forma em typescript a mesma função pode ser declarada da seguinte for
 function f(x: number): number {
     return 2 * x;
 }
+
+f(2); // returns 4
 ```
 
 _NOTA_: Typescript é considerado um superset para ECMAscript
@@ -32,6 +36,18 @@ de ser compilado (convertido) para javascript. A vantagem que
 em typescript é possível inferir o tipo, dando a vantagem para
 o desenvolvedor em realizar o tratamento de erros caso se
 aplique.
+
+## Arrow function
+
+```javascript
+const f = (x) => {
+    return 2 * x;
+};
+
+f(2); //returns 4
+```
+
+## Boas práticas
 
 A função acima seria melhor escrita da seguinte forma. Considerando tratamento de erros:
 
