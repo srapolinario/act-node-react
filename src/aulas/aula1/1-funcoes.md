@@ -14,7 +14,7 @@ Em javascript a mesma função acima pode ser declarada da seguinte forma:
 
 ```javascript
 function f(x) {
-    return 2 * x;
+  return 2 * x;
 }
 
 f(2); //returns 4
@@ -24,7 +24,7 @@ Da mesma forma em typescript a mesma função pode ser declarada da seguinte for
 
 ```typescript
 function f(x: number): number {
-    return 2 * x;
+  return 2 * x;
 }
 
 f(2); // returns 4
@@ -41,7 +41,7 @@ aplique.
 
 ```javascript
 const f = (x) => {
-    return 2 * x;
+  return 2 * x;
 };
 
 f(2); //returns 4
@@ -53,10 +53,10 @@ A função acima seria melhor escrita da seguinte forma. Considerando tratamento
 
 ```javascript
 function double(x) {
-    if (isNaN(x)) {
-        throw new Error(`A variável ${x} não é um número.`);
-    }
-    return 2 * x;
+  if (isNaN(x)) {
+    throw new Error(`A variável ${x} não é um número.`);
+  }
+  return 2 * x;
 }
 
 double(4); // 8
@@ -67,10 +67,10 @@ e em typescript:
 
 ```typescript
 function double(x: number): number {
-    if (isNaN(x)) {
-        throw new Error(`A variável ${x} não é um número.`);
-    }
-    return 2 * x;
+  if (isNaN(x)) {
+    throw new Error(`A variável ${x} não é um número.`);
+  }
+  return 2 * x;
 }
 
 double(4); // 8

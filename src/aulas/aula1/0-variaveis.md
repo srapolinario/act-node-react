@@ -42,7 +42,7 @@ _EXEMPLO_: A declaração abaixo resultará em erro pois é atribuído um valor 
 
 ```javascript
 var x = y,
-    y = "A";
+  y = "A";
 ```
 
 A declaração abaixo não resultará em erro.
