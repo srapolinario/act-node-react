@@ -2,4 +2,5 @@
 # Ignore artifacts:
 build
 coverage
+jest.config.js
 }
