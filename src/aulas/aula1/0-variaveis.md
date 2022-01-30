@@ -16,6 +16,7 @@ Tipicamente usa-se **let** em escopos locais para declarar variáveis que podem 
 Possuem escopo de bloco.
 
 _NOTA_: Escopo é o contexto de execução.
+
 _NOTA 2_: Um bloco pode ser entendido como o que está
 compreendido dentro de `{ }` podendo ser uma função ou não.
 
@@ -36,7 +37,11 @@ As declarações de variáveis utilizando **var** são de escopo global e sofrem
 
 _NOTA_: Hoisting pode ser entendido como as declarações de variáveis são processadas antes de qualquer execução do código.
 
-_sintaxe_: var varName1 [= value1 [, varName2 [, varName3 ... [, varNameN]]]];
+_sintaxe_:
+
+```javascript
+var varName1 [= value1 [, varName2 [, varName3 ... [, varNameN]]]];
+```
 
 _EXEMPLO_: A declaração abaixo resultará em erro pois é atribuído um valor y não declarado ainda para um valor x.
 
