@@ -3,11 +3,17 @@ import isTestAvailable from "../helpers/isTestAvailable";
 
 import ex1 from "../../aulas/aula2/ex1";
 import ex2 from "../../aulas/aula2/ex2";
+import ex3 from "../../aulas/aula2/ex3";
+import ex4 from "../../aulas/aula2/ex4";
+import ex5 from "../../aulas/aula2/ex5";
 
 const itIf = (condition) => (condition ? it : it.skip);
 
 const exIf1 = isTestAvailable(ex1);
 const exIf2 = isTestAvailable(ex2);
+const exIf3 = isTestAvailable(ex3);
+const exIf4 = isTestAvailable(ex4);
+const exIf5 = isTestAvailable(ex5);
 
 describe("Aula 2 - Trabalhando com funções e condicionais", () => {
   itIf(exIf1)("Ex1 - Função verificando se array tem palavra 'teste'", () => {
@@ -192,5 +198,71 @@ describe("Aula 2 - Trabalhando com funções e condicionais", () => {
     expect(sutAnswer[randomNumber].answer).toBe(
       answers[sutAnswer[randomNumber].randomNumber],
     );
+  });
+  itIf(exIf3)("Ex3 - Função maiores palavras", () => {
+    const sut = ex3;
+    const incomeValues = [
+      ["aba", "aa", "ad", "vcd", "aba"],
+      ["aa"],
+      ["abc", "eeee", "abcd", "dcd"],
+      ["a", "abc", "cbd", "zzzzzz", "a", "abcdef", "asasa", "aaaaaa"],
+      [
+        "young",
+        "yooooooung",
+        "hot",
+        "or",
+        "not",
+        "come",
+        "on",
+        "fire",
+        "water",
+        "watermelon",
+      ],
+    ];
+    const outcomeValues = [
+      ["aba", "vcd", "aba"],
+      ["aa"],
+      ["eeee", "abcd"],
+      ["zzzzzz", "abcdef", "aaaaaa"],
+      ["yooooooung", "watermelon"],
+    ];
+
+    incomeValues.forEach((incomeValue, index) => {
+      expect(sut(incomeValue)).toBe(outcomeValues[index]);
+    });
+  });
+  itIf(exIf4)("Ex4 - Função Whale talk", () => {
+    const sut = ex4;
+    const incomeValues = [
+      "Hello word",
+      "Na química nada é destruído tudo é transformado",
+      "Ser ou não ser eis a questão",
+    ];
+    const outcomeValues = ["EEOO", "AUUIAAAEEUUOUUOAOAO", "EEOUUOEEEEIAUUEEO"];
+    const weirdIncomeValues = ["kdjblskdjbflk", ""];
+    incomeValues.forEach((incomeValue, index) => {
+      expect(sut(incomeValue)).toBe(outcomeValues[index]);
+    });
+    weirdIncomeValues.forEach((incomeValue) => {
+      expect(sut(incomeValue)).toBeDefined();
+    });
+  });
+  itIf(exIf5)("Ex5 - Classe estatísticas de times", () => {
+    const sut = ex5;
+
+    const insertValues = () => {
+      sut.addGame("Lion's", 3, 2);
+      sut.addGame("King's", 5, 7);
+      sut.addGame("Dinosaur's", 6, 3);
+      sut.addPlayer("Peter", "Brow", 24);
+      sut.addPlayer("Julian", "White", 26);
+      sut.addPlayer("John", "King", 27);
+    };
+    expect(insertValues()).not.toThrow();
+    expect(sut.games.length).toBe(3);
+    expect(sut.players.length).toBe(3);
+    expect(() => {
+      sut.games = [];
+    }).toThrow();
   });
 });
