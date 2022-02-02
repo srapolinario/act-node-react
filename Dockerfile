@@ -1,13 +1,13 @@
 FROM node:14-alpine
 
-WORKDIR /app
+RUN apk add --no-cache bash
 
-COPY package.json .
+USER node
 
-COPY yarn.lock .
+WORKDIR /home/node/app
 
-RUN yarn install
+COPY ./.docker/docker-entrypoint.sh /docker-entrypoint.sh
 
-COPY . .
+RUN chmod +x /docker-entrypoint.sh
 
-CMD ["npm", "run", "test"]
+ENTRYPOINT ["/docker-entrypoint.sh"]

@@ -1,7 +1,8 @@
 version: "3"
 
 services:
-  node:
+  web:
     build: .
+    entrypoint: ./.docker/entrypoint.sh
     volumes:
       - ./src:/app/src
