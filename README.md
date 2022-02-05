@@ -18,6 +18,6 @@ docker-compose up -d --build
 
 ```bash
 docker-compose up -d
-
-docker exec -it web /bin/bash
+docker ps
+docker exec -it <aplicattion name> /bin/bash
 ```

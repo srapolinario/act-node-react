@@ -5,4 +5,4 @@ services:
     build: .
     entrypoint: ./.docker/entrypoint.sh
     volumes:
-      - .:/home/node/app
+      - .:/home/$user/app
