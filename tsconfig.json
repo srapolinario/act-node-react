@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
-    "target": "es2015",
+    "target": "ES6",
     "module": "commonjs",
-    "outDir": "./dist/",
     "rootDir": "./src",
+    "outDir": "./dist/",
     "importHelpers": true,
     "strict": true,
     "noImplicitAny": false,
@@ -20,14 +20,15 @@
     "types": ["node", "jest"],
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
-    "inlineSourceMap": true,
+    "sourceMap": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true
   },
   "exclude": [
-    "src/**/*.spec.ts",
-    "src/tests/**/*.spec.ts",
-    "src/test/mocks/**/*.ts"
+    "**/*.spec.ts",
+    "src/test/mocks/**/*.ts",
+    "src/test/helpers/**/*.ts"
   ]
 }

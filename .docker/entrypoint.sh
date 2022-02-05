@@ -5,4 +5,4 @@ fi
 
 yarn install
 
-yarn test
+tail -f /dev/null

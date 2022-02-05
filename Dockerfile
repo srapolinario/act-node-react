@@ -6,8 +6,12 @@ USER node
 
 WORKDIR /home/node/app
 
-COPY ./.docker/docker-entrypoint.sh /docker-entrypoint.sh
+USER root
 
-RUN chmod +x /docker-entrypoint.sh
+COPY ./.docker/entrypoint.sh /home/node/app/entrypoint.sh
 
-ENTRYPOINT ["/docker-entrypoint.sh"]
+RUN chmod +x /home/node/app/entrypoint.sh
+
+USER node
+
+ENTRYPOINT ["/home/node/app/entrypoint.sh"]
