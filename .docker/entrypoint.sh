@@ -3,6 +3,4 @@ if [ ! -f ".env" ]; then
     cp .env.example .env
 fi
 
-yarn install
-
-yarn test
+tail -f /dev/null

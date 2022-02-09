@@ -2,12 +2,16 @@ FROM node:14-alpine
 
 RUN apk add --no-cache bash
 
-USER node
+USER $user
 
-WORKDIR /home/node/app
+WORKDIR /home/$user/app
 
-COPY ./.docker/docker-entrypoint.sh /docker-entrypoint.sh
+USER root
 
-RUN chmod +x /docker-entrypoint.sh
+COPY ./.docker/entrypoint.sh /home/$user/app/entrypoint.sh
 
-ENTRYPOINT ["/docker-entrypoint.sh"]
+RUN chmod +x /home/$user/app/entrypoint.sh
+
+USER $user
+
+ENTRYPOINT ["~/app/entrypoint.sh"]
