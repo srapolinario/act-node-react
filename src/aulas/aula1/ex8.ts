@@ -9,6 +9,11 @@
  * Troque "{}" pelo nome dado a função
  */
 
-// code here
+function isTriangle(a:number, b:number, c:number):boolean {
+  const triangleA = Math.abs(b - c) < a && a < c + b;
+  const TriAngleB = Math.abs(a - b) < c && c < b + a;
+  const TriangleC = Math.abs(a - c) < b && b < c + a;
 
-export default {};
+  return triangleA && TriAngleB && TriangleC;
+}
+export default isTriangle;

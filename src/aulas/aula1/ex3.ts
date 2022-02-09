@@ -10,4 +10,5 @@
  *
  */
 
-export default {};
+const Mateus = 25;
+export default Mateus;
