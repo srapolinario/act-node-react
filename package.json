@@ -26,10 +26,17 @@
   },
   "lint-staged": {
     "*.{js, ts,css,md}": "prettier --write",
-    "*.{js,ts}": ["eslint --cache --fix", "jest --bail --findRelatedTests"]
+    "*.{js,ts}": [
+      "eslint --cache --fix",
+      "npm run test:staged"
+    ]
   },
   "scripts": {
     "prepare": "husky install",
-    "test": "jest"
+    "test": "jest --silent --colors --noStackTrace --passWithNoTests --runInBand",
+    "test:staged": "npm test -- --findRelatedTests",
+    "docker:build": "docker build -m '300M' --memory-swap '1G' -t app_node --build-arg USER_NAME=$USER --build-arg ID_USER=$UID .",
+    "docker:dev": "docker-compose up && docker exec -it app_node:latest /bin/bash",
+    "docker:down": "docker-compose down"
   }
 }

@@ -4,6 +4,15 @@
     "module": "commonjs",
     "rootDir": "./src",
     "outDir": "./dist/",
+    "baseUrl": "./src/aulas/aula3",
+    "paths": {
+      "@assets/*": ["assets/*"],
+      "@controllers/*": ["controllers/*"],
+      "@entities/*": ["entities/*"],
+      "@helpers/*": ["helpers/*"],
+      "@repositories/*": ["repositories/*"],
+      "@usecases/*": ["usecases/*"]
+    },
     "importHelpers": true,
     "strict": true,
     "noImplicitAny": false,

@@ -1,6 +1,6 @@
 # Aulas javascript/typescript
 
-## COnfiguração inicial
+## Configuração inicial
 
 Para utilizar instale o docker e o docker compose
 
@@ -8,16 +8,16 @@ Para utilizar instale o docker e o docker compose
 
 <https://docs.docker.com/compose/install/>
 
+<https://github.com/nodejs/docker-node/blob/main/docs/BestPractices.md>
+
 ## Primeiro build
 
 ```bash
-docker-compose up -d --build
+yarn docker:build
 ```
 
 ## Uso
 
 ```bash
-docker-compose up -d
-docker ps
-docker exec -it <aplicattion name> /bin/bash
+yarn docker:dev
 ```
